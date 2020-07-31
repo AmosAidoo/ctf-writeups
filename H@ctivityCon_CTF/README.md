@@ -1,41 +1,44 @@
 # MOBILE
 
-1. Mobile One
+## Mobile One
 Strings the apk and grep flag
 
 
 # Steganography
-1. Spy vs. Spy
+## Spy vs. Spy
 I used exiftool to find out the the image was RGB + Alpha
 I used stegsolve to find the flag
 
 
-2. Cold War
+## Cold War
 The flag was hidden with SNOW
 Use stegsnow -C cold_war.txt to reveal the flag
 
-3. Chess Cheater
+## Chess Cheater
 The flag was encoded with morse code
 I used [Morsecode World](https://morsecode.world/international/decoder/audio-decoder-adaptive.html) to decode the flag from the audio
 
 # Forensics
-1. Opposable Thumbs
+## Opposable Thumbs
 I used binwalk to identify the hidden files
 Then I used dd to extract the files from the offset found with binwalk
 
 dd bs=1 skip=offset if=thumbcache_256.db of=output
 
 # Warmups
-1. Caesar Mirror
+
+## Caesar Mirror
 Decrypt text with Ceasar Cipher.
 Figure out the flag
 third part of flag is 'reflection'
 
-2. Read The Rules
+
+## Read The Rules
 Inspect the source code
 
 # Cryptography
-1. Perfect XOR
+
+## Perfect XOR
 The a(n) function tries to check whether the number n is a perfect number
 But a(n) is too slow and there is a large gap between perfect numbers
 
@@ -66,7 +69,7 @@ while(i < len(cipher)):
 print("}")
 ```
 
-2. Tyrannosaurus Rex
+## Tyrannosaurus Rex
 
 The flag was encoded with the following proecess:
 base64encode -> enc function -> hexlify
@@ -107,10 +110,9 @@ def dec():
 
 
 
-
 # Web
 
-1. Ladybug
+## Ladybug
 I used gobuster to bruteforce some common directories on the site
 ./gobuster dir -u http://six.jh2i.com:50018/ -w /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt
 
